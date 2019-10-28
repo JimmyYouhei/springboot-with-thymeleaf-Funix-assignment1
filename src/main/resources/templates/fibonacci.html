@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+	<meta th:replace="fragments/main :: meta1">
+	<meta th:replace="fragments/main :: meta2">
+	<link th:replace="fragments/main :: bootstrap">
+
+<title>Fibonacci List</title>
+</head>
+<body class="bg-light">
+	<div class="container">
+		<h1 class="text-center font-weight-bold">Fibonacci List</h1>
+		
+		<hr>
+		
+		<ul class="list-inline">
+		
+			<th:block th:each="aFibonacciNumber: ${fibonacciList}">
+				<li class="list-inline-item" th:text="${aFibonacciNumber}"></li>
+			
+			</th:block>
+		
+		</ul>
+	</div>
+	
+	<div th:replace="fragments/main :: back"></div>
+	<div th:replace="fragments/main :: footer"></div>
+</body>
+</html>

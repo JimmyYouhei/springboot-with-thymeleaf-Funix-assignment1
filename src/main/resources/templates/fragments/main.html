@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  	<meta th:fragment="meta1" charset="utf-8">
+    <meta th:fragment="meta2" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link th:fragment="bootstrap" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container" th:fragment="back">
+		<a th:href="@{/}" class="text-left bg-dark">Back To Main Page</a>
+	</div>
+	
+	<footer class="container" th:fragment="footer">
+		<p class="text-center text-white bg-dark">made by Quan Nguyen(Jimmy Youhei)</p>
+	</footer>
+	
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta th:replace="fragments/main :: meta1">
+	<meta th:replace="fragments/main :: meta2">
+	<link th:replace="fragments/main :: bootstrap">
+	
+	<title>Welcome Page</title>
+</head>
+
+<body class="bg-secondary">
+
+	<div class="container">
+		<h1 class="text-info text-center font-weight-bold">Welcome please choose a page to go to</h1>
+		<hr>
+		
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col"><a th:href="@{/printOdd}" class="text-white">To printOdd</a></th>
+					<th scope="col"><a th:href="@{/fibonacci}" class="text-white">To Fibonacci</a> </th>
+					<th scope="col"><a th:href="@{/courseForm}" class="text-white">To Course Form</a> </th>																																																																																																																																													
+				</tr>
+			</thead>
+		</table>
+	</div>
+	
+	<div th:replace="fragments/main :: footer"></div>
+	
+</body>
+</html>

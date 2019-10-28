@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta th:replace="fragments/main :: meta1">
+	<meta th:replace="fragments/main :: meta2">
+	<link th:replace="fragments/main :: bootstrap">
+
+<title>Print Odd Numbers</title>
+</head>
+<body class="bg-light">
+	<div class="container">
+		<h1 class="text-center font-weight-bold">Print Odd</h1>
+		
+		<hr>
+		
+		<ul class="list-inline">
+			<th:block th:each="aOddNumber: ${OddNumberList}">
+				<li class="list-inline-item text-danger font-weight-bold" th:if="${aOddNumber.divisibleBy5}" th:text="${aOddNumber.value}"></li>
+				<li class="list-inline-item" th:if="${!aOddNumber.divisibleBy5}" th:text="${aOddNumber.value}">/li>
+			
+			</th:block>
+			
+		</ul>
+	</div>
+	
+	<div th:replace="fragments/main :: back"></div>
+	<div th:replace="fragments/main :: footer"></div>
+</body>
+</html>

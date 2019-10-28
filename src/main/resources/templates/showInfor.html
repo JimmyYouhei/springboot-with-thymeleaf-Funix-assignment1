@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	
+	<meta th:replace="fragments/main :: meta1">
+	<meta th:replace="fragments/main :: meta2">
+	<link th:replace="fragments/main :: bootstrap">
+<title>show information from Course Form</title>
+</head>
+
+<body class="bg-secondary">
+
+	<div class="container">
+	
+		<h1 class="text-info text-center font-weight-bold">Course Enrollment Form Detail</h1>
+		<hr>
+	
+		<table class="table table-bordered table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Given Name</th>
+					<th scope="col">Family Name</th>
+					<th scope="col">Phone Number</th>
+					<th scope="col">Email</th>
+					<th scope="col">Enroll to IT course?</th>
+					<th scope="col">Enroll to Economics course?</th>
+					<th scope="col">Enroll to Health Science course?</th>
+				</tr>
+			</thead>
+		
+			<tbody>
+				<tr>
+					<td scope="row" th:text="${givenName}"></td>
+					<td th:text="${familyName}"></td>
+					<td th:text="${phoneNumber}"></td>
+					<td th:text="${email}"></td>
+					<td>
+	
+								<input th:if="${enrollIt}" type="checkbox" checked="checked" name="enrollIt" disabled="disabled">
+
+								<input th:if="!${enrollIt}" type="checkbox" name="enrollIt" disabled="disabled">
+
+					</td>
+					
+					<td>
+								<input th:if="${enrollEconomics}" type="checkbox" checked="checked" name="enrollEconomics" disabled="disabled">
+
+								<input th:if="!${enrollEconomics}" type="checkbox" name="enrollEconomics" disabled="disabled">
+	
+					</td>
+					
+					
+					<td>
+
+								<input th:if="${enrollHealth}" type="checkbox" checked="checked" name="enrollHealth" disabled="disabled">
+
+								<input th:if="!${enrollHealth}" type="checkbox" name="enrollHealth" disabled="disabled">
+
+					</td>
+					
+				</tr>
+			</tbody>
+		
+		</table>
+	
+	</div>
+	
+	<div th:replace="fragments/main :: back"></div>
+	<div th:replace="fragments/main :: footer"></div>
+	
+</body>
+</html>
+
+				
+				
