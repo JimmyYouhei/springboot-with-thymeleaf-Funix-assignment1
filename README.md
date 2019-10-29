@@ -11,7 +11,6 @@ this is the first assignment of Funix that I redo with using Spring Boot and Thy
 -	Java 12
 -	Spring Tool Suite 4 (Version: 4.3.2.RELEASE)
 -	Maven (version 3.6.1)
--	Tomcat (version 9.0.22) but not included. As a result please download yourself 
 -	Bootstrap (version 4.3.1)
 - Other components are used according to “pom.xml” in the project
 
